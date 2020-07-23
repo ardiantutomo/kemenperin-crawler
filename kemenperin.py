@@ -7,6 +7,7 @@ def get_kemenperin_data():
     company_name = []
     try:        
         for page in range (1,679):
+            print(f"Crawling page {page}")
             url = f"http://www.kemenperin.go.id/direktori-perusahaan?what=&prov=0&hal={page}"    
             r = requests.get(url)
             soup = BeautifulSoup(r.content, 'html.parser')
